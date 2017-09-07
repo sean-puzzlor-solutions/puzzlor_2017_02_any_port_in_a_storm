@@ -25,10 +25,10 @@ int main()
 
 	IloModel model(env);	
 	
-	IloArray<IloNumVarArray> x(env);						// decision variables
+	IloArray<IloIntVarArray> x(env);						// decision variables
 	//generating decision variables
 	for (int i = 0; i < 3; i++)
-		x.add(IloNumVarArray(env, 3, 0, IloInfinity));
+		x.add(IloIntVarArray(env, 3, 0, IloInfinity));
 
 	// objective function
 	IloExpr totalDist(env);
@@ -37,7 +37,7 @@ int main()
 			totalDist += delta_cd[c][d] * x[c][d];
 		}
 	}
-	model.add(IloMaximize(env, totalDist));
+	model.add(IloMinimize(env, totalDist));
 
 	//creating constraints 2
 	for (int c = 0; c < 3; c++) {

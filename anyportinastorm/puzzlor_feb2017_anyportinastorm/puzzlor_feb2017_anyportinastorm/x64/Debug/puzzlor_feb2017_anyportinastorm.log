@@ -2,6 +2,5 @@
 c:\program files\ibm\ilog\cplex_studio1271\cplex\include\ilcplex\ilocplexi.h(3428): warning C4996: 'IloCplex::PresolveCallbackI::~PresolveCallbackI': was declared deprecated
   c:\program files\ibm\ilog\cplex_studio1271\cplex\include\ilcplex\ilocplexi.h(2013): note: compiler has generated 'IloCplex::PresolveCallbackI::~PresolveCallbackI' here
   c:\program files\ibm\ilog\cplex_studio1271\cplex\include\ilcplex\ilocplexi.h(3428): note: This diagnostic occurred in the compiler generated function 'void *IloCplex::PresolveCallbackI::__delDtor(unsigned int)'
-c:\users\seang\documents\bitbucket\puzzlor_feb2017_anyportinastorm\anyportinastorm\puzzlor_feb2017_anyportinastorm\puzzlor_feb2017_anyportinastorm\puzzlorfeb2017anyportinastorm.cpp(31): warning C4244: 'argument': conversion from 'double' to 'IloInt', possible loss of data
   puzzlor_feb2017_anyportinastorm.vcxproj -> C:\Users\seang\Documents\bitbucket\puzzlor_feb2017_anyportinastorm\anyportinastorm\puzzlor_feb2017_anyportinastorm\x64\Debug\puzzlor_feb2017_anyportinastorm.exe
   puzzlor_feb2017_anyportinastorm.vcxproj -> C:\Users\seang\Documents\bitbucket\puzzlor_feb2017_anyportinastorm\anyportinastorm\puzzlor_feb2017_anyportinastorm\x64\Debug\puzzlor_feb2017_anyportinastorm.pdb (Partial PDB)

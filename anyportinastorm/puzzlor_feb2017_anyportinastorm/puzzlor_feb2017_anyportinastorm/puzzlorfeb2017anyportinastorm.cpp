@@ -17,7 +17,7 @@ ILOSTLBEGIN
 int main()
 {
 	// data
-	int delta_cd[3][3] = { {1,2,3}, {3,2,2}, {2,1,1} };		// distance from cluster c to dock d
+	int delta_cd[3][3] = { {1,3,2}, {2,2,1}, {3,2,1} };		// distance from cluster c to dock d
 	int n_c[3] = { 8,5,7 };									// number of boats in cluster c
 	int q_d[3] = { 4,7,9 };									// number of quays in dock d
 
@@ -25,10 +25,10 @@ int main()
 
 	IloModel model(env);	
 	
-	IloArray<IloIntVarArray> x(env);						// decision variables
+	IloArray<IloNumVarArray> x(env);						// decision variables
 	//generating decision variables
 	for (int i = 0; i < 3; i++)
-		x.add(IloIntVarArray(env, 3, 0, IloInfinity));
+		x.add(IloNumVarArray(env, 3, 0, IloInfinity,IloNumVar::Int));
 
 	// objective function
 	IloExpr totalDist(env);

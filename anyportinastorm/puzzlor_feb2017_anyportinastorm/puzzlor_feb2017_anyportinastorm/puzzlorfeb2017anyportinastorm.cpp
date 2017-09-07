@@ -1,8 +1,6 @@
 // puzzlorfeb2017anyportinastorm.cpp : Defines the entry point for the console application.
 //
 
-#pragma warning(disable: 4996)
-
 #include "stdafx.h"
 
 #include <ilcplex\cplex.h>
@@ -26,21 +24,11 @@ int main()
 	IloEnv env;												// creating the ilo environment
 
 	IloModel model(env);	
-	IloArray<IloIntVarArray> x(env, 3);						// decision variables
-
+	
+	IloArray<IloNumVarArray> x(env);						// decision variables
 	//generating decision variables
-	for (IloInt i = 0; i < 3; i++)
-		x.add(IloIntVarArray(env, 3));
-
-	//naming variables
-	/*
-	char *buffer = new char[200];
-	for (int c = 0; c < 3; c++) {
-		for (int d = 0; d < 3; d++) {
-			printf(buffer, "x_{%d, %d}", c, d); 
-			x[c][d].setName(buffer);
-		}
-	}*/
+	for (int i = 0; i < 3; i++)
+		x.add(IloNumVarArray(env, 3, 0, IloInfinity));
 
 	// objective function
 	IloExpr totalDist(env);
@@ -76,6 +64,10 @@ int main()
 
 	env.out() << "Solution Status: \t" << cplex.getStatus() << std::endl;
 	env.out() << "Total Profit:    \t" << cplex.getObjValue() << std::endl;
+
+	int t;
+	std::cin >> t;
+
 
 	//env.end;
 

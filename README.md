@@ -11,3 +11,11 @@ The map above shows 20 orange boats out at sea.  With a storm approaching, each 
 ![Image](http://www.puzzlor.com/images/portinastorm_JTv1.png)
 
 **Question:  What is the minimum possible total distance traveled by all boats?**
+
+### Solution ###
+
+The solution is 31.  See the contained files for the mathematical formulation and 
+
+### Notes ###
+
+* 2017-09-06 : Added solution using Excel's built-in-solver
